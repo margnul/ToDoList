@@ -1,11 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>My ToDoList</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  
+  <div class="task" id="task-template" style="display: none;">
+    <input type="checkbox" class="task-checkbox">
+    <input type="text" name="task-text" class="task-text">
+    <button class="task-delete-button">X</button>
+  </div>
+
+  <div class="wrapper">
+    <div class="todolist">
+
+      <h1>To Do List</h1>
+
+      <div class="add-controls">
+
+        <div class="row row__with-button">
+          <input type="text" name="title" id="input-title" class="input">
+          <button class="button button__default" id="add-button">Add</button>
+        </div>
+
+        <div class="row row-relative">
+          <input type="text" name="title" id="input-search" class="input input__with-icon">
+          <button class="button button-search button__secondary" id="search-button">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12.8 12.8L9.90005 9.9M11.4667 6.13334C11.4667 9.07886 9.0789 11.4667 6.13338 11.4667C3.18786 11.4667 0.800049 9.07886 0.800049 6.13334C0.800049 3.18782 3.18786 0.800003 6.13338 0.800003C9.0789 0.800003 11.4667 3.18782 11.4667 6.13334Z"
+                stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke="#1E1E1E" />
+            </svg>
+          </button>
+        </div>
+
+      </div>
+
+      <div class="tasks-list-wrapper">
+
+        <div class="row row__space-between">
+          <p>Total Tasks: <span class="tasks-quantity" id="tasks-quantity">0</span></p>
+          <button class="button button__secondary" id="delete-all"><b>Delete All</b></button>
+        </div>
+
+        <div class="tasks-list" id="tasks-list">
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <script src="main.js"></script>
 </body>
+
 </html>
