@@ -9,11 +9,13 @@
 </head>
 
 <body>
-  <div class="task" id="task-template" style="display: none;">
-    <input type="checkbox" class="task-checkbox">
-    <input type="text" name="task-text" class="task-text">
-    <button class="task-delete-button">X</button>
-  </div>
+  <template id="task-template">
+    <div class="task">
+      <input type="checkbox" class="task-checkbox">
+      <input type="text" name="task-text" class="task-text">
+      <button class="task-delete-button">X</button>
+    </div>
+  </template>
 
   <div class="wrapper">
     <div class="todolist">
