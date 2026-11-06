@@ -20,6 +20,7 @@ class ToDoList {
 
     this.bindEvents();
     this.render();
+    this.render();
   }
 
   bindEvents() {
@@ -31,6 +32,7 @@ class ToDoList {
 
       // checkbox
       if (el.target.classList.contains('task-checkbox')) {
+        this.toggleTask(parentTask.dataset.id);
         this.toggleTask(parentTask.dataset.id);
       }
 
@@ -52,6 +54,9 @@ class ToDoList {
 
     this.addButton.addEventListener('click', () => {
       this.createTask(this.inputTitle.value);
+      this.inputTitle.value = '';
+      this.inputTitle.focus();
+      this.render();
       this.inputTitle.value = '';
       this.inputTitle.focus();
       this.render();
