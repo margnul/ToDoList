@@ -9,11 +9,13 @@
 </head>
 
 <body>
-  <div class="task" id="task-template" style="display: none;">
-    <input type="checkbox" class="task-checkbox">
-    <input type="text" name="task-text" class="task-text">
-    <button class="task-delete-button">X</button>
-  </div>
+  <template id="task-template">
+    <div class="task">
+      <input type="checkbox" class="task-checkbox">
+      <input type="text" name="task-text" class="task-text">
+      <button class="task-delete-button">X</button>
+    </div>
+  </template>
 
   <div class="wrapper">
     <div class="todolist">
@@ -44,7 +46,7 @@
 
         <div class="row row__space-between">
           <p>Total Tasks: <span class="tasks-quantity" id="tasks-quantity">0</span></p>
-          <button class="button button__secondary" id="delete-all"><b>Delete All</b></button>
+          <button class="button button__secondary" id="delete-completed"><b>Delete completed</b></button>
         </div>
 
         <div class="tasks-list" id="tasks-list">
