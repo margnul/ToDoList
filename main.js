@@ -20,7 +20,6 @@ class ToDoList {
 
     this.bindEvents();
     this.render();
-    this.render();
   }
 
   bindEvents() {
@@ -33,11 +32,9 @@ class ToDoList {
       // checkbox
       if (el.target.classList.contains('task-checkbox')) {
         this.toggleTask(parentTask.dataset.id);
-        this.toggleTask(parentTask.dataset.id);
       }
 
       // cross
-      // checkbox
       if (el.target.classList.contains('task-delete-button')) {
         parentTask.classList.add('disappearing');
         setTimeout(() => {
